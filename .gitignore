@@ -10,3 +10,6 @@ compiled/
 node_modules/
 .mise.toml
 
+# metalabel passes css/source.css through to docs/css/ — ignore the copy
+docs/css/source.css
+

@@ -1,6 +1,7 @@
 build:
-    mkdir -p docs
     mkdir -p docs/css
-    raco pollen render -pr ./src
-    raco pollen publish ./src ./docs
-    npx tailwindcss -i ./src/css/source.css -o ./docs/css/output.css -m
+    metalabel build src docs --pre-build pre-build.scm
+    npx tailwindcss -i ./css/source.css -o ./docs/css/output.css --minify
+
+serve:
+    python3 -m http.server 8000 --directory docs

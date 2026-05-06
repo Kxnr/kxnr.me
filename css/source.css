@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@source "../docs";
+
+@theme {
+  --color-bone: #e2d4c1ff;
+  --color-charcoal: #36484eff;
+  --color-copper: #a77452ff;
+  --color-light-blue: #70abbdff;
+  --color-dark-blue: #2c6163ff;
+
+  --min-height-aspect: 5vw;
+
+  --background-image-background: url('/background.png');
+  --background-image-background-fade:
+    linear-gradient(156deg, rgba(0,0,0,0) 10%, rgba(54,72,78,1) 15%, rgba(54,72,78,1) 85%, rgba(0,0,0,0) 90%),
+    url('/background.png');
+}
