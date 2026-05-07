@@ -1,12 +1,12 @@
 ;;; layout.scm — shared layout and content helpers
 
 (define nav-entries
-  '(("About Me" . "about_me.html")
+  '(("About Me" . "/about_me.html")
     ("Github"   . "https://github.com/Kxnr")))
 
 (define (nav-links)
   (apply string-append
-    (map (lambda (e) (ml->string `(li ,(ml-link (cdr e) (car e)))))
+    (map (lambda (e) (ml->string `(li (a href: ,(cdr e) ,(car e)))))
          nav-entries)))
 
 ; Background-clip text effect used in the hero banner.
